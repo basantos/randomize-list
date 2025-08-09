@@ -5,7 +5,7 @@ def detect_signal():
     print('detecting...')
     with open('randomize-list.txt', 'r') as f:
         cards = f.readlines()
-        if cards != '':
+        if cards != []:
             handle_request(cards)
 
 def handle_request(data):
@@ -26,4 +26,4 @@ def send_response(cards):
 
 while True:
     detect_signal()
-    time.sleep(5)
+    time.sleep(3)
